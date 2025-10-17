@@ -75,9 +75,9 @@ const defaultSkills: Skill[] = [
 
 const AboutSection: React.FC<AboutSectionProps> = ({
   title = 'Sobre Mí',
-  description = `Soy un estudiante de desarrollo web apasionado por la tecnología y el aprendizaje continuo. 
-    Actualmente me encuentro en proceso de formación como desarrollador Full Stack, con conocimientos en React y Node.js. 
-    A través de proyectos académicos y personales, he desarrollado habilidades tanto en frontend como en backend.`,
+  description = `Soy un estudiante de Ingeniería en Informática apasionado por la tecnología y el aprendizaje continuo. 
+    Actualmente me encuentro en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, bases de datos como PostgreSQL, y orquestaciones de inteligencia artificial en Flowise. 
+    A través de proyectos académicos y profesionales, he desarrollado habilidades tanto en frontend como en backend.`,
   profileImageUrl = '/profile-image.jpg',
   skills = defaultSkills,
   yearsOfExperience = 2,

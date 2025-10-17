@@ -41,9 +41,9 @@ const ProfileButton: React.FC<ProfileButtonProps> = ({
   type = 'contact',
   size = 'middle',
   text,
-  cvUrl = '/cv-nicolas-garrido.pdf',
-  email = 'contacto@nicolasgarrido.dev',
-  phone = '+56 9 1234 5678',
+  cvUrl = '/cv-no_hay_cv_aún.pdf',
+  email = 'nicolasgarrido802@gmail.com',
+  phone = '+56 9 4520 5623',
   className = '',
   onClick
 }) => {

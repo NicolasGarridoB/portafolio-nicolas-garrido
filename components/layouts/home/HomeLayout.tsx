@@ -81,9 +81,9 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ className = '' }) => {
         {/* Hero Section */}
         <HeroSection
           name="Nicolás Garrido"
-          title="Desarrollador Full Stack"
-          subtitle="Especializado en React, TypeScript y tecnologías modernas"
-          description="Apasionado por crear experiencias web excepcionales que combinan diseño elegante con código limpio y eficiente. Me especializo en desarrollo frontend con React y backend con Node.js."
+          title="Estudiante de Ingeniería en Informática"
+          subtitle="Especializado en Desarrollo Web Full Stack, Bases de Datos e Inteligencia Artificial."
+          description="Apasionado por la tecnología y el aprendizaje continuo. Actualmente en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, AWS y GCP, y orquestaciones de inteligencia artificial en Flowise."
           useGradientBackground={true}
           minHeight="100vh"
           showButtons={true}
@@ -101,7 +101,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ className = '' }) => {
         {/* Projects Section */}
         <ProjectsSection
           title="Proyectos Destacados"
-          description="Una selección de mis trabajos más recientes que demuestran mis habilidades en desarrollo full stack."
+          description="Una selección de mis trabajos más recientes que demuestran mis habilidades en el mundo del desarrollo."
           showFilters={true}
           initialProjectsCount={6}
           showLoadMoreButton={true}
@@ -115,13 +115,8 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ className = '' }) => {
         {/* About Section */}
         <AboutSection
           title="Sobre Mí"
-          description={`Soy un estudiante de desarrollo web apasionado por la tecnología y el aprendizaje continuo. 
-            Actualmente me encuentro en proceso de formación como desarrollador Full Stack, enfocándome en tecnologías modernas como React, TypeScript y Node.js.
-            
-            A través de proyectos académicos y personales, he desarrollado habilidades tanto en frontend como en backend. 
-            Me motiva crear aplicaciones web funcionales y aprender de cada desafío que encuentro en el camino.
-            
-            Busco oportunidades para aplicar mis conocimientos en un entorno profesional y seguir creciendo como desarrollador.`}
+          description={`Soy un estudiante de Ingeniería en Informática apasionado por la tecnología y el aprendizaje continuo. 
+    Actualmente me encuentro en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, bases de datos como PostgreSQL, y orquestaciones de inteligencia artificial en Flowise. A través de proyectos académicos y profesionales, he desarrollado habilidades tanto en frontend como en backend.`}
           profileImageUrl="/profile-nicolas.jpg"
           yearsOfExperience={2}
           completedProjects={8}
@@ -139,7 +134,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ className = '' }) => {
           socialLinks={[
             {
               platform: 'github',
-              url: 'https://github.com/nicolasgarrido',
+              url: 'https://github.com/nicolasgarridob',
               label: 'GitHub'
             },
             {

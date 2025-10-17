@@ -51,15 +51,15 @@ export interface ProjectsSectionProps {
 const defaultProjects: ProjectData[] = [
   {
     id: '1',
-    title: 'E-commerce Moderno',
-    description: 'Plataforma de comercio electrónico desarrollada con React, TypeScript y Node.js. Incluye sistema de pagos, gestión de inventario y panel administrativo.',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center',
-    technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/nicolasgarrido/ecommerce',
-    demoUrl: 'https://ecommerce-demo.nicolasgarrido.dev',
+    title: '7upper',
+    description: 'Aplicación móvil que busca impulsar el crecimiento de la alimentación sana en la comunidad chilena, especialmente de usuarios fitness y usuarios con falta de tiempo para cocinar un plato de comida.',
+    imageUrl: 'assets/images/unnamed.png',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Firebase', 'Flowise'],
+    githubUrl: '',
+    demoUrl: '',
     featured: true,
-    category: 'Full Stack',
-    completedDate: '2024'
+    category: 'Cloud Engineer, AI Orchestration',
+    completedDate: '2025'
   },
   {
     id: '2',

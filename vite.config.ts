@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: '/portafolio-nicolas-garrido/',
+  base: process.env.NODE_ENV === 'production' ? '/portafolio-nicolas-garrido/' : '/',
   plugins: [
     tailwindcss(), 
     reactRouter(), 
