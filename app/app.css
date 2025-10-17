@@ -1,15 +1,127 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* Reset básico para consistencia con Ant Design */
+* {
+  box-sizing: border-box;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+html {
+  scroll-behavior: smooth;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Clases utilitarias personalizadas */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Estilos para el header y navegación */
+.ant-menu-horizontal {
+  border-bottom: none !important;
+  background: transparent !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-horizontal > .ant-menu-submenu {
+  border-bottom: none !important;
+  margin: 0 8px !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover {
+  color: #2563eb !important;
+  border-bottom: 2px solid #2563eb !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected {
+  color: #2563eb !important;
+  border-bottom: 2px solid #2563eb !important;
+}
+
+/* Estilos para las tarjetas de proyecto */
+.project-card-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,0.05) 10px,
+    rgba(255,255,255,0.05) 20px
+  );
+  pointer-events: none;
+}
+
+.project-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card-overlay:hover {
+  opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 0.75rem;
   }
 }

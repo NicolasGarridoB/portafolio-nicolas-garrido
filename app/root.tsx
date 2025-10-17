@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { ConfigProvider } from "antd";
+import esES from "antd/locale/es_ES";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -25,15 +27,28 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Portafolio de Nicolás Garrido - Desarrollador Full Stack" />
+        <meta name="keywords" content="desarrollador, full stack, react, typescript, portfolio" />
         <Meta />
         <Links />
       </head>
       <body>
-        {children}
+        <ConfigProvider
+          locale={esES}
+          theme={{
+            token: {
+              colorPrimary: "#3b82f6",
+              borderRadius: 8,
+              fontFamily: "'Inter', system-ui, sans-serif",
+            },
+          }}
+        >
+          {children}
+        </ConfigProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
