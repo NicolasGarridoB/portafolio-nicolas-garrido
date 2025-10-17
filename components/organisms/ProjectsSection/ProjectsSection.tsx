@@ -55,22 +55,22 @@ const defaultProjects: ProjectData[] = [
     description: 'Aplicación móvil que busca impulsar el crecimiento de la alimentación sana en la comunidad chilena, especialmente de usuarios fitness y usuarios con falta de tiempo para cocinar un plato de comida.',
     imageUrl: 'assets/images/unnamed.png',
     technologies: ['React', 'TypeScript', 'Node.js', 'Firebase', 'Flowise'],
-    githubUrl: '',
-    demoUrl: '',
+    githubUrl: 'https://github.com/NicolasGarridoB',
+    demoUrl: 'https://7upper-demo.nicolasgarrido.dev',
     featured: true,
     category: 'Cloud Engineer, AI Orchestration',
     completedDate: '2025'
   },
   {
     id: '2',
-    title: 'Dashboard Analítico',
-    description: 'Dashboard interactivo para análisis de datos con gráficos en tiempo real, filtros avanzados y exportación de reportes.',
+    title: 'Dashboard APEX',
+    description: 'Dashboard interactivo para análisis de datos con gráficos.',
     imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center',
-    technologies: ['React', 'D3.js', 'Chart.js', 'TypeScript', 'Python'],
-    githubUrl: 'https://github.com/nicolasgarrido/dashboard',
+    technologies: ['APEX', 'SQL', 'ORACLE'],
+    githubUrl: 'https://github.com/NicolasGarridoB',
     demoUrl: 'https://dashboard-demo.nicolasgarrido.dev',
     featured: true,
-    category: 'Frontend',
+    category: 'Base de datos, APEX',
     completedDate: '2024'
   },
   {
@@ -79,42 +79,20 @@ const defaultProjects: ProjectData[] = [
     description: 'API RESTful robusta con autenticación JWT, documentación Swagger y deployment automatizado.',
     imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=center',
     technologies: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Docker'],
-    githubUrl: 'https://github.com/nicolasgarrido/api-rest',
+    githubUrl: 'https://github.com/NicolasGarridoB',
+    demoUrl: 'https://api-rest-demo.nicolasgarrido.dev',
     category: 'Backend',
     completedDate: '2023'
   },
   {
     id: '4',
     title: 'App Móvil React Native',
-    description: 'Aplicación móvil cross-platform con autenticación biométrica, sincronización offline y push notifications.',
+    description: 'Aplicación móvil cross-platform para vestuario.',
     imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&crop=center',
     technologies: ['React Native', 'TypeScript', 'Redux', 'Firebase'],
-    githubUrl: 'https://github.com/nicolasgarrido/mobile-app',
-    demoUrl: 'https://play.google.com/store/apps/details?id=com.nicolasgarrido.app',
+    githubUrl: 'https://github.com/NicolasGarridoB',
+    demoUrl: 'https://mobile-app-demo.nicolasgarrido.dev',
     category: 'Mobile',
-    completedDate: '2024'
-  },
-  {
-    id: '5',
-    title: 'Sistema de Gestión CRM',
-    description: 'CRM completo con gestión de clientes, pipeline de ventas, reportes automáticos y integración con email marketing.',
-    imageUrl: 'placeholder-crm-fail',
-    technologies: ['Vue.js', 'Laravel', 'MySQL', 'Redis', 'AWS'],
-    githubUrl: 'https://github.com/nicolasgarrido/crm-system',
-    demoUrl: 'https://crm-demo.nicolasgarrido.dev',
-    featured: true,
-    category: 'Full Stack',
-    completedDate: '2023'
-  },
-  {
-    id: '6',
-    title: 'Plataforma de E-learning',
-    description: 'Plataforma educativa con videos interactivos, quizzes, progreso de estudiantes y sistema de certificaciones.',
-    imageUrl: 'placeholder-education-fail',
-    technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Stripe', 'AWS S3'],
-    githubUrl: 'https://github.com/nicolasgarrido/elearning',
-    demoUrl: 'https://learn.nicolasgarrido.dev',
-    category: 'Full Stack',
     completedDate: '2024'
   }
 ];

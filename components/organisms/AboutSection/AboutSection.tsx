@@ -78,7 +78,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   description = `Soy un estudiante de Ingeniería en Informática apasionado por la tecnología y el aprendizaje continuo. 
     Actualmente me encuentro en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, bases de datos como PostgreSQL, y orquestaciones de inteligencia artificial en Flowise. 
     A través de proyectos académicos y profesionales, he desarrollado habilidades tanto en frontend como en backend.`,
-  profileImageUrl = '/profile-image.jpg',
+  profileImageUrl = '/images/perfil.png',
   skills = defaultSkills,
   yearsOfExperience = 2,
   completedProjects = 8,
@@ -87,6 +87,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   id = 'sobre-mi'
 }) => {
   const [imageError, setImageError] = useState(false);
+  
+  // Debug: Mostrar la URL de la imagen
+  console.log('Intentando cargar imagen desde:', profileImageUrl);
   
   const groupedSkills = {
     frontend: skills.filter(skill => skill.category === 'frontend'),
@@ -116,27 +119,29 @@ const AboutSection: React.FC<AboutSectionProps> = ({
             </Title>
           </div>
 
-          <Row gutter={[48, 48]} align="middle">
+          <Row gutter={[48, 48]} align="top">
             {/* Columna izquierda - Información personal */}
             <Col xs={24} lg={12}>
-              <div className="space-y-8">
+              <div className="space-y-8 h-full">
                 {/* Foto de perfil y descripción */}
                 <div className="text-center lg:text-left">
                   {!imageError ? (
-                    <Avatar
-                      size={120}
-                      src={profileImageUrl}
-                      icon={<UserOutlined />}
-                      className="mb-6 shadow-lg"
-                      onError={() => {
-                        setImageError(true);
-                        return false;
-                      }}
-                    />
+                    <div className="w-[160px] h-[160px] rounded-full mb-6 shadow-lg mx-auto lg:mx-0 overflow-hidden">
+                      <img
+                        src={profileImageUrl}
+                        alt="Foto de perfil"
+                        className="w-full h-full object-contain bg-gray-50"
+                        onError={() => {
+                          console.log('Error loading image');
+                          console.log('Image URL attempted:', profileImageUrl);
+                          setImageError(true);
+                        }}
+                      />
+                    </div>
                   ) : (
-                    <div className="w-[120px] h-[120px] rounded-full mb-6 shadow-lg mx-auto lg:mx-0 overflow-hidden">
+                    <div className="w-[160px] h-[160px] rounded-full mb-6 shadow-lg mx-auto lg:mx-0 overflow-hidden">
                       <div className="w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
-                        <UserOutlined className="text-white text-4xl" />
+                        <UserOutlined className="text-white text-5xl" />
                       </div>
                     </div>
                   )}
@@ -148,7 +153,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
 
                 {/* Estadísticas */}
                 {showStats && (
-                  <div className="bg-gray-50 rounded-lg p-6">
+                  <div className="bg-gray-50 rounded-lg p-6 mt-8">
                     <Row gutter={[24, 24]}>
                       <Col xs={12} sm={12}>
                         <div className="text-center">
@@ -178,7 +183,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
 
             {/* Columna derecha - Habilidades */}
             <Col xs={24} lg={12}>
-              <div className="space-y-6">
+              <div className="space-y-6 h-full">
                 <Title level={3} className="text-2xl font-semibold text-gray-900 mb-6">
                   Habilidades Técnicas
                 </Title>

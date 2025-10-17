@@ -117,7 +117,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ className = '' }) => {
           title="Sobre Mí"
           description={`Soy un estudiante de Ingeniería en Informática apasionado por la tecnología y el aprendizaje continuo. 
     Actualmente me encuentro en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, bases de datos como PostgreSQL, y orquestaciones de inteligencia artificial en Flowise. A través de proyectos académicos y profesionales, he desarrollado habilidades tanto en frontend como en backend.`}
-          profileImageUrl="/profile-nicolas.jpg"
+          profileImageUrl="/images/perfil.png"
           yearsOfExperience={2}
           completedProjects={8}
           showStats={true}
@@ -127,19 +127,19 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ className = '' }) => {
         {/* Footer */}
         <Footer
           contactInfo={{
-            email: 'contacto@nicolasgarrido.dev',
-            phone: '+56 9 1234 5678',
+            email: 'nicolasgarrido802@gmail.com',
+            phone: '+56 9 4520 5623',
             location: 'Santiago, Chile'
           }}
           socialLinks={[
             {
               platform: 'github',
-              url: 'https://github.com/nicolasgarridob',
+              url: 'https://github.com/NicolasGarridoB',
               label: 'GitHub'
             },
             {
               platform: 'linkedin',
-              url: 'https://linkedin.com/in/nicolasgarrido',
+              url: 'https://www.linkedin.com/in/nicol%C3%A1s-garrido-7b53b9286/',
               label: 'LinkedIn'
             }
           ]}

@@ -53,20 +53,20 @@ export interface FooterProps {
 }
 
 const defaultContactInfo: ContactInfo = {
-  email: 'contacto@nicolasgarrido.dev',
-  phone: '+56 9 1234 5678',
+  email: 'nicolasgarrido802@gmail.com',
+  phone: '+56 9 45205623',
   location: 'Santiago, Chile'
 };
 
 const defaultSocialLinks: SocialLink[] = [
   {
     platform: 'github',
-    url: 'https://github.com/nicolasgarrido',
+    url: 'https://github.com/NicolasGarridoB',
     label: 'GitHub'
   },
   {
     platform: 'linkedin',
-    url: 'https://linkedin.com/in/nicolasgarrido',
+    url: 'https://www.linkedin.com/in/nicol%C3%A1s-garrido-7b53b9286/',
     label: 'LinkedIn'
   }
 ];
@@ -111,8 +111,7 @@ const Footer: React.FC<FooterProps> = ({
                   Nicolás Garrido
                 </Title>
                 <Paragraph className="text-gray-100 text-base leading-relaxed">
-                  Desarrollador Full Stack apasionado por crear experiencias web 
-                  excepcionales con tecnologías modernas.
+                  Apasionado por la tecnología y el aprendizaje continuo. Actualmente en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, AWS y GCP, y orquestaciones de inteligencia artificial en Flowise.
                 </Paragraph>
               </Col>
 

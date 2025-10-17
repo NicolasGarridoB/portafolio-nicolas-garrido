@@ -43,7 +43,7 @@ const ProfileButton: React.FC<ProfileButtonProps> = ({
   text,
   cvUrl = '/cv-no_hay_cv_aún.pdf',
   email = 'nicolasgarrido802@gmail.com',
-  phone = '+56 9 4520 5623',
+  phone = '+56945205623',
   className = '',
   onClick
 }) => {
@@ -74,10 +74,17 @@ const ProfileButton: React.FC<ProfileButtonProps> = ({
       default:
         return {
           icon: <MailOutlined />,
-          text: text || 'Contactar',
+          text: text || 'Contacto',
           variant: 'primary' as const,
           action: () => {
-            window.open(`mailto:${email}`, '_self');
+            // Navegar a la sección de contacto en lugar de abrir email
+            const contactSection = document.querySelector('#contacto');
+            if (contactSection) {
+              contactSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              // Fallback: abrir email si no existe la sección
+              window.open(`mailto:${email}`, '_self');
+            }
           }
         };
     }

@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   size = 'default'
 }) => {
   const [imageError, setImageError] = useState(false);
-  const cardHeight = size === 'small' ? 300 : 400;
+  const cardHeight = size === 'small' ? 420 : 480; // Aumentamos la altura para mostrar los botones
 
   // Función para obtener el icono según el tipo de proyecto
   const getProjectIcon = () => {
@@ -143,7 +143,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       }}
       className={`shadow-md hover:shadow-xl transition-all duration-300 hover:scale-102 ${className}`}
       cover={
-        <div style={{ height: 200, overflow: 'hidden', position: 'relative' }}>
+        <div style={{ height: 180, overflow: 'hidden', position: 'relative' }}> {/* Reducimos de 200px a 180px */}
           {!imageError ? (
             <>
               <img
@@ -207,13 +207,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     >
       <Meta
         title={
-          <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-1">
+          <h3 className="text-lg font-semibold text-gray-800 mb-1 line-clamp-1">
             {title}
           </h3>
         }
         description={
           <div>
-            <p className="text-gray-600 mb-3 line-clamp-2 text-sm">
+            <p className="text-gray-600 mb-2 line-clamp-2 text-sm">
               {description}
             </p>
             <div className="flex flex-wrap gap-1">
@@ -222,12 +222,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   key={index} 
                   color="blue" 
                   className="text-xs rounded-full"
+                  style={{ margin: '1px' }}
                 >
                   {tech}
                 </Tag>
               ))}
               {technologies.length > 4 && (
-                <Tag className="text-xs">
+                <Tag className="text-xs" style={{ margin: '1px' }}>
                   +{technologies.length - 4} más
                 </Tag>
               )}

@@ -65,9 +65,9 @@ export interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   name = 'Nicolás Garrido',
-  title = 'Desarrollador Full Stack',
-  subtitle = 'Especializado en React, TypeScript y tecnologías modernas',
-  description = 'Apasionado por crear experiencias web excepcionales que combinan diseño elegante con código limpio y eficiente. Me especializo en desarrollo frontend con React y backend con Node.js.',
+  title = 'Estudiante de Ingeniería en Informática',
+  subtitle = 'Especializado en Desarrollo Web Full Stack, Bases de Datos e Inteligencia Artificial.',
+  description = 'Apasionado por la tecnología y el aprendizaje continuo. Actualmente en proceso de formación como desarrollador, con conocimientos en React, Node.js, JavaScript, AWS y GCP, y orquestaciones de inteligencia artificial en Flowise.',
   backgroundImage,
   useGradientBackground = true,
   minHeight = '100vh',

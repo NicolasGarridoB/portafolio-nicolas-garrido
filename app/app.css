@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Reset básico para consistencia con Ant Design */
 * {
   box-sizing: border-box;
 }
@@ -17,7 +16,6 @@ body {
   color: #333;
 }
 
-/* Clases utilitarias personalizadas */
 .container-custom {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,7 +33,6 @@ body {
   background-clip: text;
 }
 
-/* Estilos para el header y navegación */
 .ant-menu-horizontal {
   border-bottom: none !important;
   background: transparent !important;
@@ -58,7 +55,6 @@ body {
   border-bottom: 2px solid #2563eb !important;
 }
 
-/* Estilos para las tarjetas de proyecto */
 .project-card-placeholder {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
