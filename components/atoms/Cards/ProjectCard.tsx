@@ -48,6 +48,10 @@ export interface ProjectCardProps {
    * Tamaño de la tarjeta
    */
   size?: 'small' | 'default';
+  /**
+   * Permitir expandir la descripción completa
+   */
+  expandableDescription?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -58,10 +62,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
   demoUrl,
   className = '',
-  size = 'default'
+  size = 'default',
+  expandableDescription = true
 }) => {
   const [imageError, setImageError] = useState(false);
-  const cardHeight = size === 'small' ? 420 : 480; // Aumentamos la altura para mostrar los botones
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const cardHeight = size === 'small' ? 460 : 520; // Aumentamos la altura para mostrar más contenido
 
   // Función para obtener el icono según el tipo de proyecto
   const getProjectIcon = () => {
@@ -213,9 +219,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         }
         description={
           <div>
-            <p className="text-gray-600 mb-2 line-clamp-2 text-sm">
-              {description}
-            </p>
+            <div className="mb-2">
+              <p className={`text-gray-600 text-sm ${
+                expandableDescription && !isDescriptionExpanded 
+                  ? 'line-clamp-3' 
+                  : ''
+              }`}>
+                {description}
+              </p>
+              {expandableDescription && description.length > 120 && (
+                <button
+                  onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+                  className="text-blue-500 hover:text-blue-700 text-xs mt-1 font-medium transition-colors"
+                >
+                  {isDescriptionExpanded ? 'Ver menos' : 'Ver más'}
+                </button>
+              )}
+            </div>
             <div className="flex flex-wrap gap-1">
               {technologies.slice(0, 4).map((tech, index) => (
                 <Tag 

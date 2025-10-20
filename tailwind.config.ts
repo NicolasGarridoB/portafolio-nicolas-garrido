@@ -21,7 +21,4 @@ export default {
     },
   },
   plugins: [],
-  corePlugins: {
-    preflight: false, // Para evitar conflictos con Ant Design
-  },
 } satisfies Config

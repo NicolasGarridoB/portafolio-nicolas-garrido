@@ -81,6 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         technologies={project.technologies}
         githubUrl={project.githubUrl}
         demoUrl={project.demoUrl}
+        expandableDescription={true}
         className={cardClassName}
         {...rest}
       />
